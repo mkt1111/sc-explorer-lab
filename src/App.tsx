@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/AppSidebar";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import Introduction from "./pages/Introduction";
 import BitStreams from "./pages/BitStreams";
 import Operations from "./pages/Operations";
@@ -19,6 +20,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <SidebarProvider>
           <div className="flex min-h-screen w-full">
             <AppSidebar />
